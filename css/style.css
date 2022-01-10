@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* global styles */
+
+body {
+  margin: 0;
+  font-size: 15px;
+  padding: 3em 1.5em;
+  color: hsl(0, 0%, 95%);
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.6;
+  max-width: 50ch;
+}
+
+/* buttons */
+
+.btn {
+  display: inline-block;
+  background-color: hsl(0, 0%, 95%);
+  color: inherit;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: 'Lexend Deca', sans-serif;
+  padding: 1em 2.5em;
+  border-radius: 100vh;
+  margin-top: 1em;
+  font-size: 0.8rem;
+  /* border: 2px solid transparent; */
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
+  outline: 2px solid white;
+  outline-offset: -2px;
+  /* border: 2px solid hsl(0, 0%, 95%); 
+  another way to do it besides outline */
+}
+
+/* columns */
+
+.columns {
+  max-width: calc(375px - 3em);
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.column {
+  padding: 3em;
+}
+
+.title {
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: hsl(0, 0%, 95%);
+}
+
+.info {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.column.one {
+  background-color: hsl(31, 77%, 52%);
+  color: hsl(31, 77%, 52%);
+  border-radius: 10px 10px 0 0;
+}
+
+.column.two {
+  background-color: hsl(184, 100%, 22%);
+  color: hsl(184, 100%, 22%);
+}
+
+.column.three {
+  background-color: hsl(179, 100%, 13%);
+  color: hsl(179, 100%, 13%);
+  border-radius: 0 0 10px 10px;
+}
+
+footer {
+  color: black;
+  margin-top: 4rem;
+}
+
+@media (min-width: 60em) {
+  .columns {
+    margin-top: 15vh;
+    max-width: 60em;
+    grid-auto-flow: column;
+  }
+  .column.one {
+    border-radius: 10px 0 0 10px;
+  }
+  .column.three {
+    border-radius: 0 10px 10px 0;
+  }
+  .btn {
+    margin-top: 4em;
+  }
+}
